@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+
+        header span {
+            color: #f5a623;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        .main-container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: calc(100vh - 80px);
+            gap: 10px;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image-section img {
+            height: 100%;
+            width: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section {
+            flex: 2;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            height: 100%;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-card h3 {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .content-card p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        DOG BREED<span>.</span>
+    </header>
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contactus.html">Contact</a>
+</nav>
+
+    <div class="main-container">
+        <div class="image-section">
+            <img src="./static/dog_breeds_collage.png" alt="Dog Breeds">
+        </div>
+        <div class="content-section">
+            <div class="content-card">
+                <h3>Data Preparation</h3>
+                <p>The first step is to prepare the data for the CNN. This involves obtaining and cleaning the data, splitting it into training, validation, and testing sets, and performing any necessary transformations or augmentations.</p>
+            </div>
+            <div class="content-card">
+                <h3>Model Building</h3>
+                <p>The second step is to build the CNN model using the VGG19 architecture. This involves initializing the VGG19 model and modifying it for the specific classification task, typically by adding a few fully connected layers and an output layer. The model is then compiled with an appropriate loss function, optimizer, and evaluation metrics.</p>
+            </div>
+            <div class="content-card">
+                <h3>Model Training & Evaluation</h3>
+                <p>The third step is to train the model on the training data using the fit() method. During training, the model is presented with batches of training data, and the weights are updated to minimize the loss function.</p>
+            </div>
+            <div class="content-card">
+                <h3>Model Deployment</h3>
+                <p>The final step after Model Training & Deployment involves deploying the model so that it can be used in real-world applications.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
